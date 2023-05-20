@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+  background-color: #ffe8d6;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.hero-section {
+  background: #6b705c;
+  height: 30vh;
+}
+
+.recipe-section {
+  height: 60vh;
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.heading-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.heading-container h1 {
+  text-transform: capitalize;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.recipes-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recipe {
+  border: 2px solid #000000;
+  background: #6b705c;
+  min-width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.recipe span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.recipe:hover {
+  transition: 0.3s all;
+}
+
+.recipe img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.recipe:hover img {
+  opacity: 0.3;
+}
+
+.recipe:hover h2,
+.recipe:hover p {
+  z-index: 10;
+  color: #fff;
+}
+
+.recipe::before,
+.recipe::after {
+  content: '';
+  border: 1px solid #000000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.recipe:hover::before {
+  top: -0.5rem;
+  left: 0.5rem;
+}
+
+.recipe:hover::after {
+  top: -0.8rem;
+  left: 0.8rem;
+  z-index: -2;
+}
+
+/* Recipe Page */
+
+.main-wrapper {
+  height: 100vh;
+  display: flex;
+}
+
+.section {
+  height: 100%;
+  width: 50%;
+}
+
+.section-left {
+  position: relative;
+}
+
+.quinoa {
+  background: linear-gradient(
+      to bottom,
+      rgb(203, 153, 126, 0.4),
+      rgba(107, 112, 92, 0.3)
+    ),
+    url(./images/quinoa-salad.jpg) center/cover;
+}
+
+.salmon {
+  background: linear-gradient(
+      to bottom,
+      rgb(203, 153, 126, 0.4),
+      rgba(107, 112, 92, 0.3)
+    ),
+    url(./images/grilled-salmon.jpg) center/cover;
+}
+.bell-pepper {
+  background: linear-gradient(
+      to bottom,
+      rgb(203, 153, 126, 0.4),
+      rgba(107, 112, 92, 0.3)
+    ),
+    url(./images/stuffed-bell-pepper.jpg) center/cover;
+}
+
+.test {
+  color: rgba(107, 112, 92, 0);
+}
+
+.section-left h1 {
+  font-size: 6rem;
+  color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  text-decoration: underline;
+}
+
+.section-right {
+  padding: 5rem;
+  font-size: 1.375rem;
+  overflow-y: scroll;
+}
+
+.description {
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.ingredients h2,
+.steps h2 {
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.ingredients {
+  margin-bottom: 5rem;
+}
+
+li {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 3rem;
+  gap: 3rem;
+}
+
+.icon-container {
+  height: 100px;
+  width: 100px;
+  background: #6b705c;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  margin-bottom: 3rem;
+  transition: all 0.3s;
+  position: relative;
+  border: 1px solid #000;
+}
+
+.icon-container:hover {
+  background: #a9b290;
+}
+
+.icon-container::before,
+.icon-container::after {
+  content: '';
+  border: 1px solid #000000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.icon-container:hover::before {
+  top: -0.5rem;
+  left: 0.5rem;
+}
+
+.icon-container:hover::after {
+  top: -1rem;
+  left: 1rem;
+  z-index: -2;
+}
+
+.icons span {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.home {
+  color: #fff;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  transition: all 0.5s;
+}
+
+.home span {
+  margin-left: 0.5rem;
+}
+
+.home:hover {
+  transform: translateY(-0.4rem);
+}
